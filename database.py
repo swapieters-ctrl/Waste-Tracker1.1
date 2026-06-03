@@ -1,6 +1,9 @@
 import sqlite3
+import os
 from datetime import datetime, date
 import config
+
+os.makedirs(os.path.dirname(os.path.abspath(config.DATABASE_PATH)), exist_ok=True)
 
 
 def get_conn():
