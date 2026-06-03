@@ -31,7 +31,7 @@ def _variant_label(variant: str) -> str:
     return ""
 
 
-def verwerk_bericht(telefoon: str, tekst: str, media_url: str | None):
+def verwerk_bericht(telefoon: str, tekst: str, media_url):
     status = database.haal_status_op(telefoon)
     fase = status["fase"]
 
