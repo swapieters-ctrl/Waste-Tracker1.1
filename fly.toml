@@ -2,7 +2,6 @@ app = "waste-tracker-app"
 primary_region = "ams"
 
 [build]
-  builder = "paketobuildpacks/builder:base"
 
 [env]
   PORT = "8080"
