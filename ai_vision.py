@@ -38,7 +38,7 @@ def lees_etiket(foto_url: str) -> dict:
 
     response = _client.messages.create(
         model="claude-haiku-4-5-20251001",
-        max_tokens=256,
+        max_tokens=64,
         system=_SYSTEEM_PROMPT,
         messages=[
             {
