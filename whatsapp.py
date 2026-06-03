@@ -40,7 +40,9 @@ def verwerk_bericht(telefoon: str, tekst: str, media_url):
         stuur(telefoon, "Foto ontvangen, ik lees het etiket... even geduld.")
         try:
             resultaat = ai_vision.lees_etiket(media_url)
-        except Exception:
+        except Exception as e:
+            import logging
+            logging.exception("Fout bij lees_etiket: %s", e)
             stuur(telefoon, "Fout bij het lezen van het etiket. Probeer opnieuw.")
             database.reset_status(telefoon)
             return
